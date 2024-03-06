@@ -1,27 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios';
+import React from 'react'
+import useTrendingCoinList from '../CustomHooks/TrendingCoinList';
 
 
 export default function CoinList({ RowNo }) {
-    const [Data, setData] = useState();
-    useEffect(() => {
-        (async () => {
-            try {
-                const response = await axios.get(`https://api.coingecko.com/api/v3/search/trending`);
-                if (response.status === 200) {
-                    setData(response?.data?.coins);
-                    // console.log(response.data);
-                }
-                else {
-                    throw new Error("Some error ocuured");
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        })()
-    }, []);
+    const { Data, error } = useTrendingCoinList(`https://api.coingecko.com/api/v3/search/trending`);
+    if (error) {
+        console.log(error);
+        return;
+    }
     return (Data &&
-        <div className='flex flex-col gap-y-6 px-14 py-2 my-6'>
+        <div className='flex flex-col gap-y-6 px-14 py-2 my-6 max-[768px]:px-2'>
             {RowNo === 1
                 ?
                 <p className='text-3xl font-semibold'>You May Also Like</p>
@@ -38,7 +26,7 @@ export default function CoinList({ RowNo }) {
                         </div>
                         <p className='text-xl font-semibold'>{item?.item?.data?.price}</p>
                         <div className='flex justify-center items-center'>
-                            <img src={item?.item?.data?.sparkline} alt="Sparkline"/>
+                            <img src={item?.item?.data?.sparkline} alt="Sparkline" />
                         </div>
                     </div>
                 )}

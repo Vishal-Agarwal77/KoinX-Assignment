@@ -25,11 +25,11 @@ const options = {
 export default function Tokenomics() {
 
     return (
-        <div className='w-full px-7 py-8 flex flex-col gap-y-8 rounded-xl bg-white'>
+        <div className='w-full px-7 py-8 flex flex-col gap-y-8 rounded-xl bg-white max-[768px]:px-2'>
             <p className='text-3xl font-semibold'>Tokenomics</p>
             <div className='flex flex-col gap-y-4 w-full'>
                 <p className='text-black text-xl'>Initial Distribution</p>
-                <div className='flex gap-x-10 items-center'>
+                <div className='flex gap-x-10 items-center flex-wrap gap-y-4'>
                     <div className='w-[200px]'>
                         <Doughnut
                             data={data}

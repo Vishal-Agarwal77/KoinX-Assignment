@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function Sentiment() {
     return (
-        <div className='w-full px-7 py-8 flex flex-col gap-y-8 rounded-xl bg-white'>
+        <div className='w-full px-7 py-8 flex flex-col gap-y-8 rounded-xl bg-white max-[768px]:px-2'>
             <p className='text-3xl font-semibold'>Sentiments</p>
             <div className='flex flex-col gap-y-4 w-full'>
                 <p className='text-gray-500 text-xl'>key Events</p>
-                <div className='flex w-[700px] h-fit overflow-x-scroll gap-x-3 no-scrollbar'>
+                <div className='flex w-full h-fit overflow-x-scroll gap-x-3 no-scrollbar'>
                     <div className='p-6 bg-[#c4e7f5] min-w-[600px] h-fit flex gap-x-3 rounded-xl'>
                         <div className='bg-blue-500 px-3 py-2 h-fit rounded-full'>
                             <i className="fa-solid fa-newspaper" style={{ color: '#ffffff' }}></i>

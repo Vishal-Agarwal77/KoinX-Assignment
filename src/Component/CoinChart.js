@@ -14,11 +14,11 @@ function TradingViewWidget() {
         {
           "symbols": [
             [
-              "Apple",
+              "Bitcoin",
               "AAPL|1M"
             ]
           ],
-          "chartOnly": false,
+          "chartOnly": true,
           "width": "100%",
           "height": "100%",
           "locale": "en",
@@ -27,9 +27,9 @@ function TradingViewWidget() {
           "showVolume": false,
           "showMA": false,
           "hideDateRanges": false,
-          "hideMarketStatus": false,
-          "hideSymbolLogo": false,
-          "scalePosition": "right",
+          "hideMarketStatus": true,
+          "hideSymbolLogo": true,
+          "scalePosition": "left",
           "scaleMode": "Normal",
           "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
           "fontSize": "10",
@@ -38,7 +38,7 @@ function TradingViewWidget() {
           "changeMode": "no-values",
           "chartType": "area",
           "maLineColor": "#2962FF",
-          "maLineWidth": 1,
+          "maLineWidth": 0,
           "maLength": 9,
           "lineWidth": 2,
           "lineType": 0,

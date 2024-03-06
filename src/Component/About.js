@@ -3,7 +3,7 @@ import img from '../Assests/sample.jpg'
 
 export default function About({ CoinInfo }) {
     return (
-        <div className='w-full px-7 py-8 flex flex-col gap-y-8 rounded-xl bg-white h-fit'>
+        <div className='w-full px-7 py-8 flex flex-col gap-y-8 rounded-xl bg-white h-fit max-[768px]:px-2'>
             <p className='text-3xl font-semibold'>About {CoinInfo?.name}</p>
             <div className='flex flex-col gap-y-4'>
                 <p className='text-lg font-semibold'>What is {CoinInfo?.name}</p>
@@ -30,15 +30,15 @@ export default function About({ CoinInfo }) {
             </div>
             <div className='flex flex-col gap-y-4'>
                 <p className='text-3xl font-semibold'>Already Holding {CoinInfo?.name}?</p>
-                <div className='flex gap-x-4'>
-                    <div className='p-2 flex gap-x-4 rounded-xl bg-gradient-to-br from-green-400 to-blue-400'>
+                <div className='flex gap-x-4 justify-between flex-wrap gap-y-4 w-full'>
+                    <div className='min-[760px]:basis-[48%] w-full p-2 flex gap-x-4 rounded-xl bg-gradient-to-br from-green-400 to-blue-400'>
                         <img src={img} className='w-[100px] h-[100px] rounded-xl' alt="Calculate your Profits"/>
                         <div className='flex flex-col justify-between py-2'>
                             <p className='font-semibold text-xl text-white'>Calculate your Profits</p>
                             <p className='cursor-pointer text-sm flex items-center w-fit gap-x-2 px-3 py-px rounded-md bg-white'>Check Now  <i className="fa-solid fa-arrow-right"></i></p>
                         </div>
                     </div>
-                    <div className='p-2 flex gap-x-4 rounded-xl bg-gradient-to-br from-orange-400 to-red-400'>
+                    <div className='min-[760px]:basis-[48%] w-full p-2 flex gap-x-4 rounded-xl bg-gradient-to-br from-orange-400 to-red-400'>
                         <img src={img} className='w-[100px] h-[100px] rounded-xl' alt="Calculate your tax liability"/>
                         <div className='flex flex-col justify-between py-2'>
                             <p className='font-semibold text-xl text-white'>Calculate your tax liability</p>
